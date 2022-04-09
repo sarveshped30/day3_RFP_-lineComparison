@@ -1,29 +1,54 @@
 package com.bridgeLabz.lineComparison;
 
-import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.Scanner;
 import java.lang.Math;
 
 public class LineComparison {
     public static void main(String[] args) {
-        System.out.println("Enter value of x1 : ");
-        Scanner a = new Scanner(System.in);
-        int x1 = a.nextInt();
+        System.out.println("Enter the Co-ordinates of first line....");
 
-        System.out.println("Enter value of x2 : ");
-        Scanner b = new Scanner(System.in);
-        int x2 = b.nextInt();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter value of x1 : ");
+        int x1 = sc.nextInt();
 
         System.out.println("Enter value of y1 : ");
-        Scanner c = new Scanner(System.in);
-        int y1 = c.nextInt();
+        int y1 = sc.nextInt();
+
+        System.out.println("Enter value of x2 : ");
+        int x2 = sc.nextInt();
 
         System.out.println("Enter value of y2 : ");
-        Scanner d = new Scanner(System.in);
-        int y2 = d.nextInt();
+        int y2 = sc.nextInt();
 
-        double li = Math.sqrt((x2 - x1)^2 + (y2 - y1)^2);
+        System.out.println("Enter the Co-ordinates of Second line....");
 
-        System.out.println("Length of line is : " + li);
+        System.out.println("Enter value of x3 : ");
+        int x3 = sc.nextInt();
+
+        System.out.println("Enter value of y3 : ");
+        int y3 = sc.nextInt();
+
+        System.out.println("Enter value of x4 : ");
+        int x4 = sc.nextInt();
+
+        System.out.println("Enter value of y4 : ");
+        int y4 = sc.nextInt();
+
+        double l1 = Math.sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
+        double l2 = Math.sqrt((x4 - x3)*(x4 - x3) + (y4 - y3)*(y4 - y3));
+
+        System.out.println("Length of line is : " + l1);
+        System.out.println("Length of line is : " + l2);
+
+        equal(l1,l2); // Checking lines for equal length
+    }
+
+    static void equal(double l1, double l2) {
+        if (l1 == l2) {
+            System.out.println("Line 1 is equal to line 2");
+        } else {
+            System.out.println("Line 1 is not equal to line 2");
+        }
     }
 }
