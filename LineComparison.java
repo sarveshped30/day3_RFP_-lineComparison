@@ -41,12 +41,16 @@ public class LineComparison {
         System.out.println("Length of line is : " + l1);
         System.out.println("Length of line is : " + l2);
 
-        equal(l1,l2); // Checking lines for equal length
+        check(l1,l2); // Comparing the length of lines
     }
 
-    static void equal(double l1, double l2) {
+    static void check(double l1, double l2) {
         if (l1 == l2) {
             System.out.println("Line 1 is equal to line 2");
+        } else if (l1 > l2){
+            System.out.println("Line 1 is greater than line 2");
+        } else if (l2 > l1) {
+            System.out.println("Line 2 is greater than line 1");
         } else {
             System.out.println("Line 1 is not equal to line 2");
         }
